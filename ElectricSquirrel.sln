@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectricSquirrel.API", "ElectricSquirrel.API\ElectricSquirrel.API.csproj", "{0DB59D84-97BB-4590-A9A1-267156D2A4FC}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "electricsquirrel.ui", "electricsquirrel.ui\electricsquirrel.ui.esproj", "{7C255D70-98B1-488B-B2F0-3299789E680E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{13F22E93-90D2-400E-B2FE-FF26B1CBE735}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Access Control", "Access Control", "{46A7F908-29B1-4845-8FB0-763F1BA340D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Data", "Library\Access Control\Authentication.Data\Authentication.Data.csproj", "{47FC9758-3CCD-4F8C-8143-82D021998886}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Core", "Library\Access Control\Authentication.Core\Authentication.Core.csproj", "{13FC8D57-802F-4DEA-806F-35DAB6628837}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessControl.Core", "Library\Access Control\AccessControl.Core\AccessControl.Core.csproj", "{A57F044F-291C-4A27-B963-4EAC4EFC57D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorisation.Core", "Library\Access Control\Authorisation.Core\Authorisation.Core.csproj", "{D217F5A9-3C87-4E82-8E4B-4DB43F019AFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DB59D84-97BB-4590-A9A1-267156D2A4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB59D84-97BB-4590-A9A1-267156D2A4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB59D84-97BB-4590-A9A1-267156D2A4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB59D84-97BB-4590-A9A1-267156D2A4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C255D70-98B1-488B-B2F0-3299789E680E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C255D70-98B1-488B-B2F0-3299789E680E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C255D70-98B1-488B-B2F0-3299789E680E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7C255D70-98B1-488B-B2F0-3299789E680E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C255D70-98B1-488B-B2F0-3299789E680E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C255D70-98B1-488B-B2F0-3299789E680E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{47FC9758-3CCD-4F8C-8143-82D021998886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47FC9758-3CCD-4F8C-8143-82D021998886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47FC9758-3CCD-4F8C-8143-82D021998886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47FC9758-3CCD-4F8C-8143-82D021998886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FC8D57-802F-4DEA-806F-35DAB6628837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FC8D57-802F-4DEA-806F-35DAB6628837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FC8D57-802F-4DEA-806F-35DAB6628837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FC8D57-802F-4DEA-806F-35DAB6628837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57F044F-291C-4A27-B963-4EAC4EFC57D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57F044F-291C-4A27-B963-4EAC4EFC57D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57F044F-291C-4A27-B963-4EAC4EFC57D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57F044F-291C-4A27-B963-4EAC4EFC57D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D217F5A9-3C87-4E82-8E4B-4DB43F019AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D217F5A9-3C87-4E82-8E4B-4DB43F019AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D217F5A9-3C87-4E82-8E4B-4DB43F019AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D217F5A9-3C87-4E82-8E4B-4DB43F019AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{46A7F908-29B1-4845-8FB0-763F1BA340D0} = {13F22E93-90D2-400E-B2FE-FF26B1CBE735}
+		{47FC9758-3CCD-4F8C-8143-82D021998886} = {46A7F908-29B1-4845-8FB0-763F1BA340D0}
+		{13FC8D57-802F-4DEA-806F-35DAB6628837} = {46A7F908-29B1-4845-8FB0-763F1BA340D0}
+		{A57F044F-291C-4A27-B963-4EAC4EFC57D4} = {46A7F908-29B1-4845-8FB0-763F1BA340D0}
+		{D217F5A9-3C87-4E82-8E4B-4DB43F019AFD} = {46A7F908-29B1-4845-8FB0-763F1BA340D0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB9FF385-07A5-4DD1-BD5A-8B9A446D3F62}
+	EndGlobalSection
+EndGlobal
