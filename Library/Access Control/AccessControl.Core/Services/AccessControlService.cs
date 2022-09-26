@@ -71,7 +71,7 @@ namespace AccessControl.Core.Services
 
         public async Task<bool> AddUserToRole(AddUserToRole command)
         {
-
+            throw new NotImplementedException();
         }
     }
 }
