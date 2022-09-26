@@ -22,7 +22,7 @@ namespace Employment.Core.Services
             return await _employmentRepository.AddRoleAsync(role);
         }
 
-        public async Task<Shift> AddShift(Shift shift)
+        public async Task<Shift> AddShiftAsync(Shift shift)
         {
             return await _employmentRepository.AddShiftAsync(shift);
         }
@@ -82,7 +82,7 @@ namespace Employment.Core.Services
             return await _employmentRepository.UpdateRoleAsync(role);
         }
 
-        public async Task<Shift> UpdateShiftsAsync(Shift shift)
+        public async Task<Shift> UpdateShiftAsync(Shift shift)
         {
             return await _employmentRepository.UpdateShiftAsync(shift);
         }

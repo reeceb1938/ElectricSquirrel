@@ -28,13 +28,13 @@ namespace Employment.Core.Interfaces
 
 
 
-        Task<Shift> AddShift(Shift shift);
+        Task<Shift> AddShiftAsync(Shift shift);
 
         Task<IEnumerable<Shift>> GetAllShiftsAsync();
 
         Task<Shift> GetShiftAsync(int id);
 
-        Task<Shift> UpdateShiftsAsync(Shift shift);
+        Task<Shift> UpdateShiftAsync(Shift shift);
 
         Task<bool> DeleteShiftAsync(int id);
     }
