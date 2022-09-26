@@ -6,7 +6,7 @@ namespace Employment.Core.Interfaces
     {
         Task<Employer> AddEmployerAsync(Employer employer);
 
-        Task<IList<Employer>> GetAllEmployersAsync();
+        Task<IEnumerable<Employer>> GetAllEmployersAsync();
 
         Task<Employer> GetEmployerAsync(int id);
 
@@ -18,7 +18,7 @@ namespace Employment.Core.Interfaces
 
         Task<Role> AddRoleAsync(Role role);
 
-        Task<IList<Role>> GetAllRolesAsync();
+        Task<IEnumerable<Role>> GetAllRolesAsync();
 
         Task<Role> GetRoleAsync(int id);
 
@@ -30,9 +30,9 @@ namespace Employment.Core.Interfaces
 
         Task<Shift> AddShift(Shift shift);
 
-        Task<IList<Shift>> GetAllShiftsAsync();
+        Task<IEnumerable<Shift>> GetAllShiftsAsync();
 
-        Task<Shift> GetShiftAsync();
+        Task<Shift> GetShiftAsync(int id);
 
         Task<Shift> UpdateShiftsAsync(Shift shift);
 

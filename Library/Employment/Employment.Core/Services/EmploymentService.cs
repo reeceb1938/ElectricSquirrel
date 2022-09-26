@@ -5,79 +5,86 @@ namespace Employment.Core.Services
 {
     public class EmploymentService : IEmploymentService
     {
-        public Task<Employer> AddEmployerAsync(Employer employer)
+        private readonly IEmploymentRepository _employmentRepository;
+
+        public EmploymentService(IEmploymentRepository employmentRepository)
         {
-            throw new NotImplementedException();
+            _employmentRepository = employmentRepository;
         }
 
-        public Task<Role> AddRoleAsync(Role role)
+        public async Task<Employer> AddEmployerAsync(Employer employer)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.AddEmployerAsync(employer);
         }
 
-        public Task<Shift> AddShift(Shift shift)
+        public async Task<Role> AddRoleAsync(Role role)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.AddRoleAsync(role);
         }
 
-        public Task<bool> DeleteEmployerAsync(int id)
+        public async Task<Shift> AddShift(Shift shift)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.AddShiftAsync(shift);
         }
 
-        public Task<bool> DeleteRoleAsync(int id)
+        public async Task<bool> DeleteEmployerAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.DeleteEmployerAsync(id);
         }
 
-        public Task<bool> DeleteShiftAsync(int id)
+        public async Task<bool> DeleteRoleAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.DeleteRoleAsync(id);
         }
 
-        public Task<Employer> GetEmployerAsync(int id)
+        public async Task<bool> DeleteShiftAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.DeleteShiftAsync(id);
         }
 
-        public Task<IList<Employer>> GetAllEmployersAsync()
+        public async Task<Employer> GetEmployerAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.GetEmployerAsync(id);
         }
 
-        public Task<Role> GetRoleAsync(int id)
+        public async Task<IEnumerable<Employer>> GetAllEmployersAsync()
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.GetAllEmployersAsync();
         }
 
-        public Task<IList<Role>> GetAllRolesAsync()
+        public async Task<Role> GetRoleAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.GetRoleAsync(id);
         }
 
-        public Task<Shift> GetShiftAsync()
+        public async Task<IEnumerable<Role>> GetAllRolesAsync()
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.GetAllRolesAsync();
         }
 
-        public Task<IList<Shift>> GetAllShiftsAsync()
+        public async Task<Shift> GetShiftAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.GetShiftAsync(id);
         }
 
-        public Task<Employer> UpdateEmplyerAsync(Employer employer)
+        public async Task<IEnumerable<Shift>> GetAllShiftsAsync()
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.GetAllShiftsAsync();
         }
 
-        public Task<Role> UpdateRoleAsync(Role role)
+        public async Task<Employer> UpdateEmplyerAsync(Employer employer)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.UpdateEmployerAsync(employer);
         }
 
-        public Task<Shift> UpdateShiftsAsync(Shift shift)
+        public async Task<Role> UpdateRoleAsync(Role role)
         {
-            throw new NotImplementedException();
+            return await _employmentRepository.UpdateRoleAsync(role);
+        }
+
+        public async Task<Shift> UpdateShiftsAsync(Shift shift)
+        {
+            return await _employmentRepository.UpdateShiftAsync(shift);
         }
     }
 }
