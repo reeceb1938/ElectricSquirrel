@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.CompilerServices;
 
 namespace Employment.Data.Models
 {
@@ -14,5 +15,14 @@ namespace Employment.Data.Models
         public IEnumerable<Role>? Roles { get; set; }
 
         public IEnumerable<Shift>? Shifts { get; set; }
+
+        public Core.DTOs.Employer ToDto()
+        {
+            return new Core.DTOs.Employer
+            {
+                Id = Id,
+                Name = Name
+            };
+        }
     }
 }

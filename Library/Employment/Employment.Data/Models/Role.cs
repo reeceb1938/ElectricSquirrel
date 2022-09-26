@@ -25,5 +25,18 @@ namespace Employment.Data.Models
         public PayType PayType { get; set; }
 
         public IEnumerable<Shift>? Shifts { get; set; }
+
+        public Core.DTOs.Role ToDto()
+        {
+            return new Core.DTOs.Role
+            {
+                Id = Id,
+                Name = Name,
+                Employer = Employer.ToDto(),
+                PayRate = PayRate,
+                PayPeriod = PayPeriod,
+                PayType = PayType
+            };
+        }
     }
 }

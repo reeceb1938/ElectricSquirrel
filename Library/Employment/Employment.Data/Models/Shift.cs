@@ -47,5 +47,22 @@ namespace Employment.Data.Models
 
         [Required]
         public bool IsProspective { get; set; }
+
+        public Core.DTOs.Shift ToDto()
+        {
+            return new Core.DTOs.Shift
+            {
+                Id = Id,
+                Employer = Employer.ToDto(),
+                Role = Role.ToDto(),
+                StartDateTime = StartDateTime,
+                EndDateTime = EndDateTime,
+                BreakInMinutes = BreakInMinutes,
+                RecordedStartDateTime = RecordedStartDateTime,
+                RecordedEndDateTime = RecordedEndDateTime,
+                RecordedBreakInMinutes = RecordedBreakInMinutes,
+                IsProspective = IsProspective
+            };
+        }
     }
 }
