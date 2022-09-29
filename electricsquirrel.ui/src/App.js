@@ -1,59 +1,50 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BaseLayout from './layouts/BaseLayout';
+import NavigationLayout from './layouts/NavigationLayout'
+import Calendar from './pages/Calendar';
+import Employers from './pages/Employers';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import PageNotFound from './pages/PageNotFound';
+import AuthenticationProvider from './components/AuthenticationProvider';
+import PrivateRoute from './components/PrivateRoute';
+// import EsApiProvider from './components/EsApiProvider';
+// import ViewStateProvider from './components/ViewStateProvider';
 
 export default class App extends Component {
     static displayName = App.name;
 
     constructor(props) {
         super(props);
-        this.state = { forecasts: [], loading: true };
+        this.state = { loading: true };
     }
 
     componentDidMount() {
-        this.populateWeatherData();
-    }
-
-    static renderForecastsTable(forecasts) {
-        return (
-            <table className='table table-striped' aria-labelledby="tabelLabel">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Temp. (C)</th>
-                        <th>Temp. (F)</th>
-                        <th>Summary</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {forecasts.map(forecast =>
-                        <tr key={forecast.date}>
-                            <td>{forecast.date}</td>
-                            <td>{forecast.temperatureC}</td>
-                            <td>{forecast.temperatureF}</td>
-                            <td>{forecast.summary}</td>
-                        </tr>
-                    )}
-                </tbody>
-            </table>
-        );
+        // this.populateWeatherData();
     }
 
     render() {
-        let contents = this.state.loading
-            ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-            : App.renderForecastsTable(this.state.forecasts);
-
         return (
-            <div>
-                <h1 id="tabelLabel" >Weather forecast</h1>
-                <p>This component demonstrates fetching data from the server.</p>
-                {contents}
-            </div>
-        );
-    }
+            <AuthenticationProvider>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<BaseLayout></BaseLayout>}>
+                            <Route path='login' element={<Login></Login>}></Route>
 
-    async populateWeatherData() {
-        const response = await fetch('weatherforecast');
-        const data = await response.json();
-        this.setState({ forecasts: data, loading: false });
+                            <Route path='' element={<PrivateRoute></PrivateRoute>}>
+                                <Route path='' element={<NavigationLayout></NavigationLayout>}>
+                                    <Route index element={<Home></Home>}></Route>
+                                    <Route path='calendar' element={<Calendar></Calendar>}></Route>
+                                    <Route path='employers' element={<Employers></Employers>}></Route>
+                                </Route>
+                            </Route>
+
+                            <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
+                        </Route>
+                    </Routes>
+                </BrowserRouter>
+            </AuthenticationProvider>
+        );
     }
 }
