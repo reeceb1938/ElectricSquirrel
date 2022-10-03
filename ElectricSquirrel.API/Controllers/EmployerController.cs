@@ -34,13 +34,13 @@ namespace ElectricSquirrel.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<Employer> UpdateEmployer([FromForm] Employer employer)
+        public async Task<Employer> UpdateEmployerAsync([FromForm] Employer employer)
         {
             return await _employmentService.UpdateEmplyerAsync(employer);
         }
 
         [HttpDelete("{id}")]
-        public async Task<bool> DeleteEmployer([FromRoute] int id)
+        public async Task<bool> DeleteEmployerAsync([FromRoute] int id)
         {
             return await _employmentService.DeleteEmployerAsync(id);
         }
