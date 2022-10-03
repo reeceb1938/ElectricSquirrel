@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Library\Access Control\AccessControl.Core\AccessControl.Core.csproj" />
     <ProjectReference Include="..\Library\Employment\Employment.Core\Employment.Core.csproj" />
+    <ProjectReference Include="..\Library\Employment\Employment.Data\Employment.Data.csproj" />
   </ItemGroup>
 
 </Project>

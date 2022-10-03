@@ -16,16 +16,15 @@ function Login({ prevLocation }) {
     const auth = useAuth();
     const navigate = useNavigate();
 
-    const handleSubmit = (event) => {
+    async function handleSubmit(event) {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
 
-        auth.login();
-        prevLocation ? navigate(prevLocation) : navigate('/');
+        if (await auth.loginAsync(data.get('email'), data.get('password'))) {
+            prevLocation ? navigate(prevLocation) : navigate('/');
+        } else {
+            // TODO: login failure
+        }
     }
 
     return (

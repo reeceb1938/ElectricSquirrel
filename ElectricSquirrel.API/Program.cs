@@ -1,4 +1,6 @@
 using AccessControl.Core;
+using Employment.Core;
+using Employment.Data;
 using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace ElectricSquirrel.API
@@ -21,6 +23,8 @@ namespace ElectricSquirrel.API
             builder.Services.AddSwaggerGen();
 
             AccessControlCore.Setup(builder.Services, builder.Configuration);
+            EmploymentCore.Setup(builder.Services, builder.Configuration);
+            EmploymentData.Setup(builder.Services, builder.Configuration);
 
             var app = builder.Build();
 

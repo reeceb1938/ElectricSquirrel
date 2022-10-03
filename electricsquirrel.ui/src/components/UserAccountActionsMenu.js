@@ -18,8 +18,8 @@ const UserAccountActionsMenu = () => {
         setAccountActionsMenuAnchorEl(null);
     }
 
-    const handleLogoutClick = () => {
-        auth.logout();
+    async function handleLogoutClick() {
+        await auth.logoutAsync();
         navigate('/login');
     }
 

@@ -1,23 +1,46 @@
 import { useState } from "react";
+import useElectricSquirrelApi from "./useElectricSquirrelApi";
+
+export var bearerToken = null;
+export function setBearerToken(newValue) {
+    bearerToken = newValue;
+}
 
 const useAuthProvider = () => {
     const [user, setUser] = useState(null);
+    const api = useElectricSquirrelApi();
 
-    const login = () => {
-        localStorage.setItem('user_state', true);
+    async function loginAsync(username, password) {
+        const result = await api.accessControl.loginAsync(username, password);
+
+        if (result !== null) {
+            setBearerToken(result.token);
+            setUser(result);
+            return true;
+        }
+
+        return false;
     };
 
-    const logout = () => {
+    async function logoutAsync() {
+        await api.accessControl.logoutAsync();
+        setUser(null);
+        setBearerToken(null);
         localStorage.setItem('user_state', false);
     };
 
     const isAuthenticated = () => {
-        return localStorage.getItem('user_state') === 'true';
+        return user !== null;
+    }
+
+    const getBearerToken = () => {
+        return bearerToken;
     }
 
     return {
-        login,
-        logout,
+        getBearerToken,
+        loginAsync,
+        logoutAsync,
         isAuthenticated
     };
 }

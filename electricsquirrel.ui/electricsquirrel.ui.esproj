@@ -12,6 +12,7 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\build</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="src\api\ElectricSquirrel\dtos\" />
     <Folder Include="src\layouts\" />
     <Folder Include="src\components\" />
     <Folder Include="src\hooks\" />

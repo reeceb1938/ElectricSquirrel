@@ -149,7 +149,7 @@ export default function NavigationLayout(props) {
                 <Box
                     sx={{
                         flexGrow: 1,
-                        p: 3,
+                        // p: 3,
                         width: '100%',
                         overflowX: 'hidden',
                         overflowY: 'auto',

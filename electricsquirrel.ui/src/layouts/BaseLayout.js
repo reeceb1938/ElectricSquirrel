@@ -30,6 +30,9 @@ function BaseLayout() {
             createTheme({
                 palette: {
                     mode: userPrefersDarkMode ? 'dark' : 'light',
+                    //primary: {
+                    //    main: '#EE02EE',
+                    //},
                 },
                 components: {
                     MuiLink: {

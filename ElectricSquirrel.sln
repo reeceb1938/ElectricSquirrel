@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorisation.Core", "Libra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Employment", "Employment", "{59824B6B-DA29-41D1-992C-D6F96F1A1BAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employment.Core", "Library\Employment\Employment.Core\Employment.Core.csproj", "{1BB73100-15AB-4ADE-97F9-F86ACC0A5A30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employment.Core", "Library\Employment\Employment.Core\Employment.Core.csproj", "{1BB73100-15AB-4ADE-97F9-F86ACC0A5A30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employment.Data", "Library\Employment\Employment.Data\Employment.Data.csproj", "{365F2BBF-7A42-4A66-A274-88B212572326}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employment.Data", "Library\Employment\Employment.Data\Employment.Data.csproj", "{365F2BBF-7A42-4A66-A274-88B212572326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
