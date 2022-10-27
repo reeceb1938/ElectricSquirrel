@@ -19,7 +19,22 @@ export default class EmployerClient {
     }
 
     async getAllEmployersAsync() {
+        const response = await fetch("api/Employer/", {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${bearerToken}`
+            }
+        });
 
+        if (!response.ok) {
+            return []
+        }
+        const json = await response.json();
+
+        console.log(json);
+
+        return json;
     }
 
     async updateEmployerAsync(employer) {

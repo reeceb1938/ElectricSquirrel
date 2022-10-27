@@ -20,10 +20,15 @@ function AddEmployerDialog(props) {
         const result = await api.employers.createEmployerAsync({ name: newEmployerName });
 
         if (result) {
+            resetDialog();
             props.onClose();
         } else {
 
         }
+    }
+
+    function resetDialog() {
+        setNewEmployerName("");
     }
 
     return (
